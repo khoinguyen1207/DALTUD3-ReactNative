@@ -1,5 +1,3 @@
-/* eslint-disable react-native/no-inline-styles */
-/* eslint-disable prettier/prettier */
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -69,6 +67,20 @@ const DATA = [
         quantity: 3,
         price: 52000,
     },
+    {
+        id: '8',
+        name: 'Matcha',
+        size: 'L',
+        quantity: 2,
+        price: 62000,
+    },
+    {
+        id: '9',
+        name: 'Sinh tố bơ',
+        size: 'M',
+        quantity: 1,
+        price: 52000,
+    },
 ];
 
 type ItemProps = {
@@ -82,7 +94,10 @@ const Item = (item: ItemProps) => (
     <View style={styles.item}>
         <View style={styles.itemLeft}>
             <TouchableOpacity>
-                <Image source={require('../../assets/edit.png')} style={styles.btnEdit} />
+                <Image
+                    source={require('../../assets/edit.png')}
+                    style={styles.btnEdit}
+                />
             </TouchableOpacity>
             <View>
                 <Text style={styles.itemName}>

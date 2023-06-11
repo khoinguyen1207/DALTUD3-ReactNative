@@ -5973,11 +5973,14 @@ react-test-renderer@18.2.0:
     react-shallow-renderer "^16.15.0"
     scheduler "^0.23.0"
 
+<<<<<<< Updated upstream
 react-vector-icons@^0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/react-vector-icons/-/react-vector-icons-0.0.1.tgz#5f105a20b658bec8821b38194c5aca734702b30a"
   integrity sha512-Glj+UVRRsnxTLFYxF5XGKMOBTvIB4K+nLkESB6dFnvnVjuz7f5pZ3e668HonNlp6dS4VvofToX1LzwZPsmruFQ==
 
+=======
+>>>>>>> Stashed changes
 react@18.2.0:
   version "18.2.0"
   resolved "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
@@ -6516,11 +6519,14 @@ statuses@~1.5.0:
   version "1.5.0"
   resolved "https://registry.npmjs.org/statuses/-/statuses-1.5.0.tgz"
   integrity sha512-OpZ3zP+jT1PI7I8nemJX4AKmAX070ZkYPVWV/AaKTJl+tXCTGyVdC1a4SL8RUQYEwk/f34ZX8UTykN68FwrqAA==
+<<<<<<< Updated upstream
 
 strict-uri-encode@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/strict-uri-encode/-/strict-uri-encode-2.0.0.tgz#b9c7330c7042862f6b142dc274bbcc5866ce3546"
   integrity sha512-QwiXZgpRcKkhTj2Scnn++4PKtWsH0kpzZ62L2R6c/LUVYv7hVnZqcg2+sMuT6R7Jusu1vviK/MFsu6kNJfWlEQ==
+=======
+>>>>>>> Stashed changes
 
 string-length@^4.0.1:
   version "4.0.2"

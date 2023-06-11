@@ -11,7 +11,6 @@ import {
     StyleSheet,
     View,
     Text,
-    ImageBackground,
     TextInput,
     TouchableOpacity,
     TouchableWithoutFeedback,
@@ -25,10 +24,7 @@ function Login(): JSX.Element {
         <KeyboardAvoidingView style={styles.container}>
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
                 <View style={styles.container}>
-                    <ImageBackground
-                        source={require('../../assets/bg.png')}
-                        style={styles.image}
-                        resizeMode="cover">
+                    <View style={styles.image}>
                         <View style={styles.contentContainer}>
                             <View style={{alignItems: 'center', flex: 1}}>
                                 <Text style={styles.textTitle}>
@@ -41,56 +37,53 @@ function Login(): JSX.Element {
                                     <TextInput
                                         style={styles.textInput}
                                         placeholder="Email"
+                                        keyboardType="email-address"
                                     />
                                 </View>
                                 <View style={styles.groupInput}>
                                     <Text style={styles.titleInput}>
-                                        Password
+                                        Mật khẩu
                                     </Text>
                                     <TextInput
                                         style={styles.textInput}
-                                        placeholder="Password"
+                                        placeholder="Mật khẩu"
+                                        secureTextEntry
                                     />
                                 </View>
-                                <View>
-                                    <TouchableOpacity
-                                        style={styles.button}
-                                        onPress={() =>
-                                            Alert.alert(
-                                                'Notice',
-                                                'Đăng nhập thành công',
-                                                [
-                                                    {
-                                                        text: 'OK',
-                                                        onPress: () =>
-                                                            console.log(
-                                                                'OK Pressed',
-                                                            ),
-                                                    },
-                                                ],
-                                            )
-                                        }>
-                                        <Text style={styles.buttonTitle}>
-                                            LOGIN
-                                        </Text>
-                                    </TouchableOpacity>
-                                </View>
+                                <TouchableOpacity
+                                    style={styles.button}
+                                    onPress={() =>
+                                        Alert.alert(
+                                            'Thông báo',
+                                            'Đăng nhập thành công',
+                                            [
+                                                {
+                                                    text: 'OK',
+                                                    onPress: () =>
+                                                        console.log(
+                                                            'OK Pressed',
+                                                        ),
+                                                },
+                                            ],
+                                        )
+                                    }>
+                                    <Text style={styles.buttonTitle}>
+                                        Đăng nhập
+                                    </Text>
+                                </TouchableOpacity>
                                 <View style={styles.navigateSignin}>
                                     <Text style={{fontSize: 16}}>
                                         Chưa có tài khoản?
                                     </Text>
-                                    <Text
-                                        style={{
-                                            marginLeft: 5,
-                                            color: '#D27842',
-                                            fontSize: 16,
-                                        }}>
-                                        Đăng ký
-                                    </Text>
+                                    <TouchableOpacity>
+                                        <Text style={styles.textRegister}>
+                                            Đăng ký
+                                        </Text>
+                                    </TouchableOpacity>
                                 </View>
                             </View>
                         </View>
-                    </ImageBackground>
+                    </View>
                 </View>
             </TouchableWithoutFeedback>
         </KeyboardAvoidingView>
@@ -104,6 +97,7 @@ const styles = StyleSheet.create({
     image: {
         flex: 1,
         justifyContent: 'flex-end',
+        backgroundColor: '#C29363',
     },
     contentContainer: {
         flex: 1,
@@ -116,9 +110,9 @@ const styles = StyleSheet.create({
     },
     content: {
         height: 350,
-        backgroundColor: 'rgba(255, 255, 255, 0.7)',
-        borderTopRightRadius: 40,
-        borderTopLeftRadius: 40,
+        backgroundColor: 'rgba(255, 255, 255, 1)',
+        borderTopRightRadius: 20,
+        borderTopLeftRadius: 20,
         padding: 40,
     },
     groupInput: {
@@ -127,7 +121,7 @@ const styles = StyleSheet.create({
     textInput: {
         borderWidth: 1,
         borderColor: 'gray',
-        borderRadius: 5,
+        borderRadius: 2,
         paddingHorizontal: 10,
         backgroundColor: 'white',
     },
@@ -137,9 +131,9 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     button: {
-        backgroundColor: '#D27842',
+        backgroundColor: '#C29363',
         paddingVertical: 10,
-        borderRadius: 20,
+        borderRadius: 10,
         width: 200,
         alignSelf: 'center',
     },
@@ -150,10 +144,14 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
     navigateSignin: {
-        alignSelf: 'center',
+        justifyContent: 'center',
         flexDirection: 'row',
         marginTop: 20,
-        color: 'black',
+    },
+    textRegister: {
+        marginLeft: 5,
+        color: '#C29363',
+        fontSize: 16,
     },
 });
 
