@@ -26,7 +26,7 @@ function Login(): JSX.Element {
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
                 <View style={styles.container}>
                     <ImageBackground
-                        source={require('../../assets/bg.png')}
+                        source={require('../../assets/Images/bg.png')}
                         style={styles.image}
                         resizeMode="cover">
                         <View style={styles.contentContainer}>
