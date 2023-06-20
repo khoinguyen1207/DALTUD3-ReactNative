@@ -7,6 +7,7 @@ import App from './App';
 import {name as appName} from './app.json';
 import Login from './screen/Login/Login';
 import Home from './screen/Home/Home';
-import Header from './screen/Header/Header'
+import Header from './screen/Header/Header';
+import Menu from './screen/Bottom-tab/Menu';
 
-AppRegistry.registerComponent(appName, () => Home);
+AppRegistry.registerComponent(appName, () => Menu);
