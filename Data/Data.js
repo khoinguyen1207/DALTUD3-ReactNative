@@ -105,3 +105,82 @@ export const Home = [
         Date: '03/01',
     },
 ];
+export const Coffe = [
+    {
+        id: '1',
+        Name: 'Caramel Đá',
+        Img: require('../assets/Images/caramelda.jpg'),
+        Price: '40.000đ',
+    },
+    {
+        id: '2',
+        Name: 'Caramel Nóng',
+        Img: require('../assets/Images/Caramel.jpg'),
+        Price: '39.000đ',
+    },
+    {
+        id: '3',
+        Name: 'Chocolate Nóng',
+        Img: require('../assets/Images/hotchoco.jpg'),
+        Price: '19.000đ',
+    },
+    {
+        id: '4',
+        Name: 'Bạc Xĩu',
+        Img: require('../assets/Images/bacxiu.jpg'),
+        Price: '29.000đ',
+    },
+    {
+        id: '5',
+        Name: 'Cà Phê Sữa Nóng',
+        Img: require('../assets/Images/suada.jpg'),
+        Price: '39.000đ',
+    },
+];
+export const Tea = [
+    {
+        id: '1',
+        Name: 'Trà Long Nhãn Hạt Sen',
+        Img: require('../assets/Images/tranhan.jpg'),
+        Price: '49.000đ',
+    },
+    {
+        id: '2',
+        Name: 'Trà Đào Cam sả',
+        Img: require('../assets/Images/tradao.jpg'),
+        Price: '49.000đ',
+    },
+    {
+        id: '3',
+        Name: 'Trà Đào Cam Sả - Nóng',
+        Img: require('../assets/Images/tradaonong.jpg'),
+        Price: '59.000đ',
+    },
+];
+export const Ice = [
+    {
+        id: '1',
+        Name: 'Americano',
+        Price: '59.000đ',
+    },
+    {
+        id: '2',
+        Name: 'Americano',
+        Price: '59.000đ',
+    },
+    {
+        id: '3',
+        Name: 'Americano',
+        Price: '59.000đ',
+    },
+    {
+        id: '4',
+        Name: 'Americano',
+        Price: '59.000đ',
+    },
+    {
+        id: '5',
+        Name: 'Americano',
+        Price: '59.000đ',
+    },
+];

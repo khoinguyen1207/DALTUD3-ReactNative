@@ -26,7 +26,7 @@ const promoName = 'Ưu đãi';
 export default function App() {
     return (
         <NavigationContainer>
-            <Tab.Navigator initialRouteName={homeName}>
+            <Tab.Navigator initialRouteName={orderName}>
                 <Tab.Screen
                     name="Trang chủ"
                     component={Home}
