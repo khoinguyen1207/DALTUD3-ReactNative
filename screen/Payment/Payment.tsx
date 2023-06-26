@@ -7,8 +7,13 @@
 
 import React, {useState} from 'react';
 import {
+    faArrowLeft,
+    faChevronRight,
+    faPenToSquare,
+} from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
+import {
     FlatList,
-    Image,
     SafeAreaView,
     ScrollView,
     StyleSheet,
@@ -16,6 +21,7 @@ import {
     TouchableOpacity,
     View,
 } from 'react-native';
+import {formatCurrency} from '../../utils/utils';
 
 const DATA = [
     {
@@ -93,10 +99,10 @@ type ItemProps = {
 const Item = (item: ItemProps) => (
     <View style={styles.item}>
         <View style={styles.itemLeft}>
-            <TouchableOpacity>
-                <Image
-                    source={require('../../assets/edit.png')}
-                    style={styles.btnEdit}
+            <TouchableOpacity style={styles.btnEdit}>
+                <FontAwesomeIcon
+                    icon={faPenToSquare}
+                    style={{color: '#E57905'}}
                 />
             </TouchableOpacity>
             <View>
@@ -106,27 +112,46 @@ const Item = (item: ItemProps) => (
                 <Text>Size: {item.size}</Text>
             </View>
         </View>
-        <Text style={styles.textPrice}>{item.price}</Text>
+        <Text style={styles.textPrice}>{formatCurrency(item.price)}</Text>
     </View>
 );
 
-function StopWatch(): JSX.Element {
+function Payment(): JSX.Element {
     const [selectRadio, setRadio] = useState(1);
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView>
                 <View style={styles.titleBar}>
                     <TouchableOpacity style={styles.btnBack}>
-                        <Text
-                            style={{
-                                fontSize: 13,
-                                fontWeight: '400',
-                                color: 'black',
-                            }}>
-                            Quay về
-                        </Text>
+                        <FontAwesomeIcon icon={faArrowLeft} />
                     </TouchableOpacity>
                     <Text style={styles.title}>Xác nhận đơn hàng</Text>
+                </View>
+                <View style={styles.group}>
+                    <Text style={styles.titleGroup}>Địa điểm lấy hàng</Text>
+                    <TouchableOpacity style={styles.itemView}>
+                        <View>
+                            <Text style={styles.textItem}>HCM Cao Thang</Text>
+                            <Text style={styles.subTextItem} numberOfLines={1}>
+                                86 Cao Thắng, Quận 3, Hồ Chí Minh, Việt Nam
+                            </Text>
+                        </View>
+                        <FontAwesomeIcon
+                            icon={faChevronRight}
+                            style={styles.chevron}
+                            size={12}
+                        />
+                    </TouchableOpacity>
+                    <View style={styles.itemView}>
+                        <View>
+                            <Text style={styles.textItem}>
+                                Thời gian nhận hàng
+                            </Text>
+                            <Text style={styles.subTextItem} numberOfLines={1}>
+                                15 - 30 phút
+                            </Text>
+                        </View>
+                    </View>
                 </View>
                 <View style={styles.group}>
                     <Text style={styles.titleGroup}>Sản phẩm đã chọn</Text>
@@ -219,7 +244,7 @@ const styles = StyleSheet.create({
     },
     title: {
         fontSize: 18,
-        color: '#C29363',
+        color: '#E57905',
         fontWeight: 'bold',
     },
     titleBar: {
@@ -241,9 +266,12 @@ const styles = StyleSheet.create({
         padding: 15,
     },
     titleGroup: {
-        fontSize: 20,
+        fontSize: 18,
         color: 'black',
         fontWeight: '500',
+    },
+    btnEdit: {
+        marginRight: 10,
     },
     item: {
         flex: 1,
@@ -260,11 +288,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         alignItems: 'center',
         flex: 1,
-    },
-    btnEdit: {
-        height: 20,
-        width: 20,
-        marginRight: 10,
     },
     itemName: {
         fontSize: 16,
@@ -300,7 +323,7 @@ const styles = StyleSheet.create({
         borderRadius: 12,
     },
     radioBg: {
-        backgroundColor: '#C29363',
+        backgroundColor: '#E57905',
         height: 14,
         width: 14,
         borderRadius: 10,
@@ -314,7 +337,7 @@ const styles = StyleSheet.create({
     },
     // Payment
     paymentBar: {
-        backgroundColor: '#C29363',
+        backgroundColor: '#E57905',
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -334,7 +357,24 @@ const styles = StyleSheet.create({
     textBtnCheckout: {
         fontSize: 18,
         fontWeight: 'bold',
-        color: '#C29363',
+        color: '#E57905',
+    },
+
+    itemView: {
+        flexDirection: 'row',
+        alignItems: 'center',
+        marginTop: 10,
+    },
+    chevron: {
+        position: 'absolute',
+        right: 0,
+    },
+    textItem: {
+        fontSize: 14,
+        color: 'black',
+    },
+    subTextItem: {
+        color: 'gray',
     },
 });
-export default StopWatch;
+export default Payment;

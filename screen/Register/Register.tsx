@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -31,7 +32,7 @@ function Login(): JSX.Element {
                                 uri: 'https://file.hstatic.net/1000075078/file/thecofeehouse_nguocgochibiscus_5_d775e20255c744ac9b71cee56cb21536_grande.jpg',
                             }}
                             resizeMode="cover"
-                            style={{alignItems: 'center', flex: 1}}>
+                            style={{alignItems: 'center', flexGrow: 1}}>
                             <Text style={styles.textTitle}>Coffee House</Text>
                         </ImageBackground>
                         <View style={styles.content}>
@@ -45,6 +46,16 @@ function Login(): JSX.Element {
                             </View>
                             <View style={styles.groupInput}>
                                 <Text style={styles.titleInput}>Mật khẩu</Text>
+                                <TextInput
+                                    style={styles.textInput}
+                                    placeholder="Mật khẩu"
+                                    secureTextEntry
+                                />
+                            </View>
+                            <View style={styles.groupInput}>
+                                <Text style={styles.titleInput}>
+                                    Nhập lại mật khẩu
+                                </Text>
                                 <TextInput
                                     style={styles.textInput}
                                     placeholder="Mật khẩu"
@@ -66,17 +77,15 @@ function Login(): JSX.Element {
                                         ],
                                     )
                                 }>
-                                <Text style={styles.buttonTitle}>
-                                    Đăng nhập
-                                </Text>
+                                <Text style={styles.buttonTitle}>Đăng ký</Text>
                             </TouchableOpacity>
                             <View style={styles.navigateSignin}>
                                 <Text style={{fontSize: 16}}>
-                                    Chưa có tài khoản?
+                                    Đã có tài khoản?
                                 </Text>
                                 <TouchableOpacity>
                                     <Text style={styles.textRegister}>
-                                        Đăng ký
+                                        Đăng nhập
                                     </Text>
                                 </TouchableOpacity>
                             </View>
@@ -97,14 +106,14 @@ const styles = StyleSheet.create({
     },
     textTitle: {
         color: 'white',
-        marginTop: 50,
+        marginTop: 40,
         fontSize: 50,
         fontWeight: 'bold',
     },
     content: {
         backgroundColor: 'rgba(255, 255, 255, 1)',
         paddingHorizontal: 30,
-        paddingVertical: 30,
+        paddingVertical: 20,
         marginTop: -20,
         borderRadius: 20,
     },
