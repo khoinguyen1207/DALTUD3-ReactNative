@@ -1,77 +1,186 @@
-export const TitleCoffe = [
+export const Idea = [
     {
         id: '1',
-        Titel: 'Americano',
+        Img: require('../assets/Images/tradao.jpg'),
+        Name: 'Trà đào Cam Sả - Đá',
+        Price: '59.000đ',
     },
     {
         id: '2',
-        Titel: 'Latte',
+        Img: require('../assets/Images/trasen.jpg'),
+        Name: 'Trà Long Nhân Hạt Sen',
+        Price: '59.000đ',
     },
     {
         id: '3',
-        Titel: 'Chocolate',
+        Img: require('../assets/Images/hotchoco.jpg'),
+        Name: 'Chocolate Đá',
+        Price: '55.000đ',
     },
     {
         id: '4',
-        Titel: 'Coffee',
+        Img: require('../assets/Images/caramelda.jpg'),
+        Name: 'Caramel Macchiato Đá',
+        Price: '59.000đ',
     },
     {
         id: '5',
-        Titel: 'Capuchino',
+        Img: require('../assets/Images/KemNuong.jpg'),
+        Name: 'CloudTea Oolong Nướng Kem Cheese',
+        Price: '59.000đ',
     },
     {
         id: '6',
-        Titel: 'Milk Coffee',
+        Img: require('../assets/Images/trasen.jpg'),
+        Name: 'Trà đào Cam Sả - Đá',
+        Price: '59.000đ',
     },
 ];
-export const coffeeItems = [
+export const TitleNew = [
     {
         id: 1,
-        name: 'Black Coffee',
-        price: '25.50',
-        volume: '116 ml',
-        stars: '4.6',
-        image: require('../assets/coffee2.png'),
-        desc: 'The taste of coffee can vary depending on factors such as the type of beans, roast level, brewing method, and the addition of any flavors or sweeteners.',
+        Title: 'Ưu đãi đặc biệt',
+        Name: 'New_Special',
     },
-
     {
         id: 2,
-        name: 'Cappuccino',
-        price: '15.50',
-        volume: '110 ml',
-        stars: '4.3',
-        image: require('../assets/coffee2.png'),
-        desc: 'The taste of coffee can vary depending on factors such as the type of beans, roast level, brewing method, and the addition of any flavors or sweeteners.',
+        Title: 'Cập nhật từ nhà',
+        Name: 'Home',
     },
-
     {
         id: 3,
-        name: 'Espresso',
-        price: '30.00',
-        volume: '100 ml',
-        stars: '4.0',
-        image: require('../assets/coffee3.png'),
-        desc: 'The taste of coffee can vary depending on factors such as the type of beans, roast level, brewing method, and the addition of any flavors or sweeteners.',
+        Title: '#CoffeLover',
+        Name: 'Lover',
     },
-
+];
+export const New_Special = [
     {
-        id: 4,
-        name: 'Latte',
-        price: '10.30',
-        volume: '80 ml',
-        stars: '3.5',
-        image: require('../assets/coffee4.png'),
-        desc: 'The taste of coffee can vary depending on factors such as the type of beans, roast level, brewing method, and the addition of any flavors or sweeteners.',
+        id: '1',
+        Img: require('../assets/Images/New1.jpg'),
+        Name: 'Mát lạnh sản khoái - bật mood chill hè',
+        Date: '14/06',
     },
-
     {
-        id: 5,
-        name: 'Mocha',
-        price: '23.10',
-        volume: '120 ml',
-        stars: '4.7',
-        image: require('../assets/coffee5.png'),
-        desc: 'The taste of coffee can vary depending on factors such as the type of beans, roast level, brewing method, and the addition of any flavors or sweeteners.',
+        id: '2',
+        Img: require('../assets/Images/New2.jpg'),
+        Name: 'Tiệc mát lạnh',
+        Date: '7/06',
+    },
+    {
+        id: '3',
+        Img: require('../assets/Images/New3.jpg'),
+        Name: 'Deal cực đã - hè cực cool',
+        Date: '1/06',
+    },
+    {
+        id: '4',
+        Img: require('../assets/Images/New4.jpg'),
+        Name: 'Tiệc hè chill - deal cực chất',
+        Date: '7/06',
+    },
+    {
+        id: '5',
+        Img: require('../assets/Images/New5.jpg'),
+        Name: 'Ăn bánh uống nước cùng nhà hem',
+        Date: '1/06',
+    },
+];
+export const Home = [
+    {
+        id: '1',
+        Img: require('../assets/Images/Blog1.jpg'),
+        Name: 'Hi-tea kombucha detox-gọn dáng sáng',
+        Date: '14/06',
+    },
+    {
+        id: '2',
+        Img: require('../assets/Images/Blog2.jpg'),
+        Name: 'Cà phê đường đen: vượt chuẩn vị quen',
+        Date: '14/06',
+    },
+    {
+        id: '3',
+        Img: require('../assets/Images/Blog3.jpg'),
+        Name: 'The coffee house miễn phí giao hàng ..',
+        Date: '03/01',
+    },
+];
+export const Coffe = [
+    {
+        id: '1',
+        Name: 'Caramel Đá',
+        Img: require('../assets/Images/caramelda.jpg'),
+        Price: '40.000đ',
+    },
+    {
+        id: '2',
+        Name: 'Caramel Nóng',
+        Img: require('../assets/Images/Caramel.jpg'),
+        Price: '39.000đ',
+    },
+    {
+        id: '3',
+        Name: 'Chocolate Nóng',
+        Img: require('../assets/Images/hotchoco.jpg'),
+        Price: '19.000đ',
+    },
+    {
+        id: '4',
+        Name: 'Bạc Xĩu',
+        Img: require('../assets/Images/bacxiu.jpg'),
+        Price: '29.000đ',
+    },
+    {
+        id: '5',
+        Name: 'Cà Phê Sữa Nóng',
+        Img: require('../assets/Images/suada.jpg'),
+        Price: '39.000đ',
+    },
+];
+export const Tea = [
+    {
+        id: '1',
+        Name: 'Trà Long Nhãn Hạt Sen',
+        Img: require('../assets/Images/tranhan.jpg'),
+        Price: '49.000đ',
+    },
+    {
+        id: '2',
+        Name: 'Trà Đào Cam sả',
+        Img: require('../assets/Images/tradao.jpg'),
+        Price: '49.000đ',
+    },
+    {
+        id: '3',
+        Name: 'Trà Đào Cam Sả - Nóng',
+        Img: require('../assets/Images/tradaonong.jpg'),
+        Price: '59.000đ',
+    },
+];
+export const Ice = [
+    {
+        id: '1',
+        Name: 'Americano',
+        Price: '59.000đ',
+    },
+    {
+        id: '2',
+        Name: 'Americano',
+        Price: '59.000đ',
+    },
+    {
+        id: '3',
+        Name: 'Americano',
+        Price: '59.000đ',
+    },
+    {
+        id: '4',
+        Name: 'Americano',
+        Price: '59.000đ',
+    },
+    {
+        id: '5',
+        Name: 'Americano',
+        Price: '59.000đ',
     },
 ];
