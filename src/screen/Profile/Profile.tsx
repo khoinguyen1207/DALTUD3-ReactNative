@@ -1,4 +1,5 @@
-/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable prettier/prettier */
+import React from 'react';
 import {
     faBell,
     faCartShopping,
@@ -10,27 +11,16 @@ import {
     faUser,
 } from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import React from 'react';
 
-import {
-    View,
-    Text,
-    StyleSheet,
-    SafeAreaView,
-    TouchableOpacity,
-} from 'react-native';
+import {View, Text, StyleSheet, SafeAreaView, TouchableOpacity} from 'react-native';
 
-function Profile(): JSX.Element {
+function Profile({navigation}: {navigation: any}): JSX.Element {
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.statusBar}>
-                <Text
-                    style={{fontSize: 20, color: 'black', fontWeight: 'bold'}}>
-                    Khác
-                </Text>
+                <Text style={{fontSize: 20, color: 'black', fontWeight: 'bold'}}>Khác</Text>
                 <View style={styles.groupVoucher}>
-                    <TouchableOpacity
-                        style={[styles.btnVoucher, {marginRight: 10}]}>
+                    <TouchableOpacity style={[styles.btnVoucher, {marginRight: 10}]}>
                         <FontAwesomeIcon
                             icon={faTicket}
                             style={{
@@ -48,7 +38,7 @@ function Profile(): JSX.Element {
             </View>
             <View style={styles.body}>
                 <Text style={styles.titleText}>Tiện ích</Text>
-                <TouchableOpacity style={styles.btnUtil}>
+                <TouchableOpacity style={styles.btnUtil} onPress={() => navigation.navigate('OrderHistory')}>
                     <FontAwesomeIcon
                         icon={faFileLines}
                         style={{
@@ -67,7 +57,8 @@ function Profile(): JSX.Element {
                         marginBottom: 30,
                     }}>
                     <TouchableOpacity
-                        style={[styles.btnUtil, {flex: 1, marginRight: 40}]}>
+                        style={[styles.btnUtil, {flex: 1, marginRight: 40}]}
+                        onPress={() => navigation.navigate('Voucher')}>
                         <FontAwesomeIcon
                             icon={faTicket}
                             style={{
@@ -94,42 +85,19 @@ function Profile(): JSX.Element {
                 <Text style={styles.titleText}>Tài Khoản</Text>
                 <View style={styles.contentView}>
                     <TouchableOpacity style={styles.sectionView}>
-                        <FontAwesomeIcon
-                            icon={faUser}
-                            style={{marginRight: 10}}
-                        />
-                        <Text style={styles.textSection}>
-                            Thông tin cá nhân
-                        </Text>
-                        <FontAwesomeIcon
-                            icon={faChevronRight}
-                            style={styles.chevron}
-                            size={12}
-                        />
+                        <FontAwesomeIcon icon={faUser} style={{marginRight: 10}} />
+                        <Text style={styles.textSection}>Thông tin cá nhân</Text>
+                        <FontAwesomeIcon icon={faChevronRight} style={styles.chevron} size={12} />
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.sectionView}>
-                        <FontAwesomeIcon
-                            icon={faGear}
-                            style={{marginRight: 10}}
-                        />
+                        <FontAwesomeIcon icon={faGear} style={{marginRight: 10}} />
                         <Text style={styles.textSection}>Cài đặt</Text>
-                        <FontAwesomeIcon
-                            icon={faChevronRight}
-                            style={styles.chevron}
-                            size={12}
-                        />
+                        <FontAwesomeIcon icon={faChevronRight} style={styles.chevron} size={12} />
                     </TouchableOpacity>
-                    <TouchableOpacity style={styles.sectionView}>
-                        <FontAwesomeIcon
-                            icon={faRightFromBracket}
-                            style={{marginRight: 10}}
-                        />
+                    <TouchableOpacity style={styles.sectionView} onPress={() => navigation.navigate('Login')}>
+                        <FontAwesomeIcon icon={faRightFromBracket} style={{marginRight: 10}} />
                         <Text style={styles.textSection}>Đăng xuất</Text>
-                        <FontAwesomeIcon
-                            icon={faChevronRight}
-                            style={styles.chevron}
-                            size={12}
-                        />
+                        <FontAwesomeIcon icon={faChevronRight} style={styles.chevron} size={12} />
                     </TouchableOpacity>
                 </View>
             </View>

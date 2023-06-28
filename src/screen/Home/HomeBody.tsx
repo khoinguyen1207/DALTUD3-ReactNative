@@ -1,27 +1,14 @@
-import React, {useEffect, useState} from 'react';
-import {
-    FlatList,
-    Image,
-    ImageSourcePropType,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
-} from 'react-native';
+/* eslint-disable react-native/no-inline-styles */
+/* eslint-disable prettier/prettier */
+import React, {useState} from 'react';
+import {FlatList, Image, ScrollView, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import Swiper from 'react-native-swiper';
-import {Idea, New_Special, TitleNew, Home} from '../../Data/Data';
-import {
-    faCalendarDays,
-    faStarAndCrescent,
-    faWandMagicSparkles,
-} from '@fortawesome/free-solid-svg-icons';
+import {Idea, New_Special, TitleNew, Home} from '../../data/Data';
+import {faCalendarDays, faWandMagicSparkles} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import {Icon} from 'react-native-vector-icons/Icon';
 
 export default function HomeBody() {
     const [Active, setActive] = useState(1);
-    const [New, SetNew] = useState(1);
     const [SaveView, SetSaveView] = useState(New_Special);
     var Title;
     const New_Titel = (item: number) => {
@@ -68,18 +55,9 @@ export default function HomeBody() {
                             }}
                         />
                     }>
-                    <Image
-                        style={[style.Slider]}
-                        source={require('../../assets/Images/Slider1.jpg')}
-                    />
-                    <Image
-                        style={[style.Slider]}
-                        source={require('../../assets/Images/Slider2.jpg')}
-                    />
-                    <Image
-                        style={[style.Slider]}
-                        source={require('../../assets/Images/Slider3.jpg')}
-                    />
+                    <Image style={[style.Slider]} source={require('../../assets/Images/Slider1.jpg')} />
+                    <Image style={[style.Slider]} source={require('../../assets/Images/Slider2.jpg')} />
+                    <Image style={[style.Slider]} source={require('../../assets/Images/Slider3.jpg')} />
                 </Swiper>
             </View>
             <View style={{paddingHorizontal: 15, marginBottom: 15}}>
@@ -89,7 +67,7 @@ export default function HomeBody() {
                     horizontal
                     showsHorizontalScrollIndicator={false}
                     data={Idea}
-                    keyExtractor={item => item.id}
+                    keyExtractor={(item) => item.id}
                     renderItem={({item}) => {
                         return (
                             <View
@@ -148,7 +126,7 @@ export default function HomeBody() {
                     <Text style={[style.Text]}>Khám phá thêm</Text>
                     <FontAwesomeIcon
                         icon={faWandMagicSparkles}
-                        color="#F5E03B"
+                        color='#F5E03B'
                         size={23}
                         style={{marginLeft: 5, alignItems: 'center'}}
                     />
@@ -159,7 +137,7 @@ export default function HomeBody() {
                         horizontal
                         showsHorizontalScrollIndicator={false}
                         data={TitleNew}
-                        keyExtractor={item => String(item.id)}
+                        keyExtractor={(item) => String(item.id)}
                         renderItem={({item}) => {
                             const ActiveColor = item.id == Active;
                             return (
@@ -168,17 +146,13 @@ export default function HomeBody() {
                                     style={[
                                         style.Btn_TitleNew,
                                         {
-                                            backgroundColor: ActiveColor
-                                                ? '#FFF2D9'
-                                                : 'white',
+                                            backgroundColor: ActiveColor ? '#FFF2D9' : 'white',
                                         },
                                     ]}>
                                     <Text
                                         style={{
                                             fontSize: 16,
-                                            color: ActiveColor
-                                                ? '#E57905'
-                                                : 'black',
+                                            color: ActiveColor ? '#E57905' : 'black',
                                             fontWeight: 'bold',
                                         }}>
                                         {item.Title}
@@ -195,7 +169,7 @@ export default function HomeBody() {
                         justifyContent: 'space-between',
                         flexWrap: 'wrap',
                     }}>
-                    {SaveView.map(name => {
+                    {SaveView.map((name) => {
                         return (
                             <View style={style.New}>
                                 <Image
@@ -206,7 +180,7 @@ export default function HomeBody() {
                                         borderRadius: 20,
                                     }}
                                     source={name.Img}
-                                    resizeMode="cover"
+                                    resizeMode='cover'
                                 />
                                 <View>
                                     <Text
@@ -220,12 +194,8 @@ export default function HomeBody() {
                                         {name.Name}
                                     </Text>
                                     <View style={{flexDirection: 'row'}}>
-                                        <FontAwesomeIcon
-                                            icon={faCalendarDays}
-                                        />
-                                        <Text style={{marginLeft: 5}}>
-                                            {name.Date}
-                                        </Text>
+                                        <FontAwesomeIcon icon={faCalendarDays} />
+                                        <Text style={{marginLeft: 5}}>{name.Date}</Text>
                                     </View>
                                 </View>
                             </View>

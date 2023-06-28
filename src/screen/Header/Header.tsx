@@ -1,20 +1,8 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
-import {
-    View,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    SafeAreaView,
-    Image,
-    StatusBar,
-    ScrollView,
-    FlatList,
-} from 'react-native';
+import {View, StyleSheet, Text, TouchableOpacity, Image} from 'react-native';
 import {faBell, faTicket} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import Swiper from 'react-native-swiper';
-import {Idea} from '../../Data/Data';
-import HomeBody from '../Home/HomeBody';
 
 export default function Header() {
     return (
@@ -29,16 +17,12 @@ export default function Header() {
             <View style={style.ItemView}>
                 <TouchableOpacity style={style.Btn_Menu}>
                     <View style={{flexDirection: 'row'}}>
-                        <FontAwesomeIcon
-                            color="#E88C28"
-                            size={20}
-                            icon={faTicket}
-                        />
+                        <FontAwesomeIcon color='#E88C28' size={20} icon={faTicket} />
                         <Text style={[style.Text, {marginLeft: 10}]}>9</Text>
                     </View>
                 </TouchableOpacity>
                 <TouchableOpacity style={[style.Btn_Menu, {marginLeft: 10}]}>
-                    <FontAwesomeIcon color="#F5E03B" size={20} icon={faBell} />
+                    <FontAwesomeIcon color='#F5E03B' size={20} icon={faBell} />
                 </TouchableOpacity>
             </View>
         </View>

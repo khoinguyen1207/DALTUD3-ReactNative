@@ -1,22 +1,9 @@
+/* eslint-disable prettier/prettier */
 import React, {useState} from 'react';
-import {
-    FlatList,
-    Image,
-    SectionList,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
-} from 'react-native';
-import {Coffe, Tea, Ice} from '../../Data/Data';
+import {FlatList, Image, SectionList, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import {Coffe, Tea, Ice} from '../../data/Data';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import {
-    faEllipsis,
-    faGlassWater,
-    faIceCream,
-    faMugSaucer,
-    faPlus,
-} from '@fortawesome/free-solid-svg-icons';
+import {faEllipsis, faGlassWater, faIceCream, faMugSaucer, faPlus} from '@fortawesome/free-solid-svg-icons';
 import ModelOrder from './ModelOrder';
 
 function ListItem({data, Title}) {
@@ -34,7 +21,7 @@ function ListItem({data, Title}) {
             <FlatList
                 style={{overflow: 'hidden'}}
                 data={data}
-                keyExtractor={item => item.id}
+                keyExtractor={(item) => item.id}
                 renderItem={({item}) => {
                     return (
                         <View style={styles.List}>
@@ -46,27 +33,18 @@ function ListItem({data, Title}) {
                                             height: 120,
                                             borderRadius: 15,
                                         }}
-                                        resizeMode="cover"
+                                        resizeMode='cover'
                                         source={item.Img}
                                     />
                                 </View>
                                 <View style={styles.ListCenter}>
-                                    <Text
-                                        style={{fontSize: 18, color: 'black'}}>
-                                        {item.Name}
-                                    </Text>
-                                    <Text style={{fontSize: 15}}>
-                                        {item.Price}
-                                    </Text>
+                                    <Text style={{fontSize: 18, color: 'black'}}>{item.Name}</Text>
+                                    <Text style={{fontSize: 15}}>{item.Price}</Text>
                                 </View>
                             </View>
                             <View style={styles.ListBottom}>
                                 <TouchableOpacity style={styles.BtnAdd}>
-                                    <FontAwesomeIcon
-                                        size={15}
-                                        color="white"
-                                        icon={faPlus}
-                                    />
+                                    <FontAwesomeIcon size={15} color='white' icon={faPlus} />
                                 </TouchableOpacity>
                             </View>
                         </View>
@@ -91,11 +69,7 @@ function BodyOrder() {
                                 borderRadius: 100,
                                 padding: 10,
                             }}>
-                            <FontAwesomeIcon
-                                size={25}
-                                color="#83491A"
-                                icon={faGlassWater}
-                            />
+                            <FontAwesomeIcon size={25} color='#83491A' icon={faGlassWater} />
                         </View>
                         <Text style={styles.ContentText}>Cà phê</Text>
                     </TouchableOpacity>
@@ -106,11 +80,7 @@ function BodyOrder() {
                                 borderRadius: 100,
                                 padding: 10,
                             }}>
-                            <FontAwesomeIcon
-                                size={25}
-                                color="pink"
-                                icon={faIceCream}
-                            />
+                            <FontAwesomeIcon size={25} color='pink' icon={faIceCream} />
                         </View>
                         <Text style={styles.ContentText}>Đá xay</Text>
                     </TouchableOpacity>
@@ -121,17 +91,11 @@ function BodyOrder() {
                                 borderRadius: 100,
                                 padding: 10,
                             }}>
-                            <FontAwesomeIcon
-                                size={25}
-                                color="tomato"
-                                icon={faMugSaucer}
-                            />
+                            <FontAwesomeIcon size={25} color='tomato' icon={faMugSaucer} />
                         </View>
                         <Text style={styles.ContentText}>Trà</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity
-                        onPress={show}
-                        style={styles.Contentcontainer}>
+                    <TouchableOpacity onPress={show} style={styles.Contentcontainer}>
                         <View
                             style={{
                                 backgroundColor: '#FFF2D9',

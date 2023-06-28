@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -9,40 +8,26 @@
 import {faArrowLeft, faMugHot} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import React, {useState} from 'react';
-import {
-    SafeAreaView,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
-} from 'react-native';
+import {SafeAreaView, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 const categoryList = ['Đang thực hiện', 'Đã hoàn tất', 'Đã hủy'];
-const noticeList = [
-    'Chưa có đơn hàng đang thực hiện',
-    'Chưa có đơn hàng đã hoàn tất',
-    'Chưa có đơn hàng đã hủy',
-];
+const noticeList = ['Chưa có đơn hàng đang thực hiện', 'Chưa có đơn hàng đã hoàn tất', 'Chưa có đơn hàng đã hủy'];
 
 const EmptyComponent = ({item}: {item: string}) => {
     return (
         <View style={styles.emptyView}>
-            <FontAwesomeIcon
-                icon={faMugHot}
-                style={{color: 'gray'}}
-                size={40}
-            />
+            <FontAwesomeIcon icon={faMugHot} style={{color: 'gray'}} size={40} />
             <Text style={{marginTop: 10}}>{item}</Text>
         </View>
     );
 };
 
-function OrderHistory(): JSX.Element {
+function OrderHistory({navigation}: {navigation: any}): JSX.Element {
     const [tab, setTab] = useState('Đang thực hiện');
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.titleBar}>
-                <TouchableOpacity style={styles.btnBack}>
+                <TouchableOpacity style={styles.btnBack} onPress={() => navigation.goBack()}>
                     <FontAwesomeIcon icon={faArrowLeft} />
                 </TouchableOpacity>
                 <Text style={styles.title}>Lịch sử đơn hàng</Text>
@@ -50,29 +35,20 @@ function OrderHistory(): JSX.Element {
             <View style={styles.lineView} />
             <View style={styles.mainView}>
                 <View style={styles.groupNavigate}>
-                    {categoryList.map(item => {
+                    {categoryList.map((item) => {
                         return (
                             <TouchableOpacity
-                                style={[
-                                    styles.btnNavigate,
-                                    tab === item && styles.btnActive,
-                                ]}
+                                style={[styles.btnNavigate, tab === item && styles.btnActive]}
                                 key={item}
                                 onPress={() => setTab(item)}>
-                                <Text style={styles.textBtnNavigate}>
-                                    {item}
-                                </Text>
+                                <Text style={styles.textBtnNavigate}>{item}</Text>
                             </TouchableOpacity>
                         );
                     })}
                 </View>
                 <View style={styles.contentView}>
                     {noticeList.map((item, index) => {
-                        return (
-                            tab === categoryList[index] && (
-                                <EmptyComponent item={item} key={item} />
-                            )
-                        );
+                        return tab === categoryList[index] && <EmptyComponent item={item} key={item} />;
                     })}
                 </View>
             </View>

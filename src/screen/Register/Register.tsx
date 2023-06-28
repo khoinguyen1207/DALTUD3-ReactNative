@@ -1,4 +1,4 @@
-/* eslint-disable prettier/prettier */
+/* eslint-disable react-native/no-inline-styles */
 /**
  * Sample React Native App
  * https://github.com/facebook/react-native
@@ -19,11 +19,12 @@ import {
     KeyboardAvoidingView,
     Alert,
     ImageBackground,
+    Platform,
 } from 'react-native';
 
-function Login(): JSX.Element {
+function Register({navigation}: {navigation: any}): JSX.Element {
     return (
-        <KeyboardAvoidingView style={styles.container}>
+        <KeyboardAvoidingView style={styles.container} behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
                 <View style={styles.container}>
                     <View style={styles.contentContainer}>
@@ -31,62 +32,42 @@ function Login(): JSX.Element {
                             source={{
                                 uri: 'https://file.hstatic.net/1000075078/file/thecofeehouse_nguocgochibiscus_5_d775e20255c744ac9b71cee56cb21536_grande.jpg',
                             }}
-                            resizeMode="cover"
-                            style={{alignItems: 'center', flexGrow: 1}}>
+                            resizeMode='cover'
+                            style={{
+                                alignItems: 'center',
+                                flexGrow: 1,
+                            }}>
                             <Text style={styles.textTitle}>Coffee House</Text>
                         </ImageBackground>
                         <View style={styles.content}>
                             <View style={styles.groupInput}>
                                 <Text style={styles.titleInput}>Email</Text>
-                                <TextInput
-                                    style={styles.textInput}
-                                    placeholder="Email"
-                                    keyboardType="email-address"
-                                />
+                                <TextInput style={styles.textInput} placeholder='Email' keyboardType='email-address' />
                             </View>
                             <View style={styles.groupInput}>
                                 <Text style={styles.titleInput}>Mật khẩu</Text>
-                                <TextInput
-                                    style={styles.textInput}
-                                    placeholder="Mật khẩu"
-                                    secureTextEntry
-                                />
+                                <TextInput style={styles.textInput} placeholder='Mật khẩu' secureTextEntry />
                             </View>
                             <View style={styles.groupInput}>
-                                <Text style={styles.titleInput}>
-                                    Nhập lại mật khẩu
-                                </Text>
-                                <TextInput
-                                    style={styles.textInput}
-                                    placeholder="Mật khẩu"
-                                    secureTextEntry
-                                />
+                                <Text style={styles.titleInput}>Nhập lại mật khẩu</Text>
+                                <TextInput style={styles.textInput} placeholder='Nhập lại mật khẩu' secureTextEntry />
                             </View>
                             <TouchableOpacity
                                 style={styles.button}
                                 onPress={() =>
-                                    Alert.alert(
-                                        'Thông báo',
-                                        'Đăng nhập thành công',
-                                        [
-                                            {
-                                                text: 'OK',
-                                                onPress: () =>
-                                                    console.log('OK Pressed'),
-                                            },
-                                        ],
-                                    )
+                                    Alert.alert('Thông báo', 'Đăng ký thành công', [
+                                        {
+                                            text: 'OK',
+                                            onPress: () => navigation.navigate('TabNavigate'),
+                                        },
+                                    ])
                                 }>
                                 <Text style={styles.buttonTitle}>Đăng ký</Text>
                             </TouchableOpacity>
                             <View style={styles.navigateSignin}>
-                                <Text style={{fontSize: 16}}>
-                                    Đã có tài khoản?
-                                </Text>
-                                <TouchableOpacity>
-                                    <Text style={styles.textRegister}>
-                                        Đăng nhập
-                                    </Text>
+                                <Text style={{fontSize: 16}}>Đã có tài khoản?</Text>
+                                <TouchableOpacity onPress={() => navigation.navigate('Login')}>
+                                    <Text style={styles.textRegister}>Đăng nhập</Text>
                                 </TouchableOpacity>
                             </View>
                         </View>
@@ -158,4 +139,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default Login;
+export default Register;

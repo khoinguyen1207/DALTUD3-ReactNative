@@ -1,23 +1,12 @@
+/* eslint-disable react-native/no-inline-styles */
 import {faXmark} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import React, {useEffect, useState} from 'react';
-import {
-    Dimensions,
-    Image,
-    Modal,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
-} from 'react-native';
+import {Dimensions, Image, Modal, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
 function ModelOrder({value, Hide, Show}) {
     return (
-        <Modal
-            animationType="fade"
-            transparent={true}
-            visible={value}
-            statusBarTranslucent={true}>
+        <Modal animationType='fade' transparent={true} visible={value} statusBarTranslucent={true}>
             <View
                 style={{
                     flex: 1,
@@ -49,7 +38,7 @@ function ModelOrder({value, Hide, Show}) {
                             <Image
                                 source={require('../../assets/Images/Coffesearch.png')}
                                 style={styles.Image}
-                                resizeMode="center"
+                                resizeMode='center'
                             />
                         </View>
                         <Text style={styles.ContentText}>Cà phê</Text>
@@ -64,7 +53,7 @@ function ModelOrder({value, Hide, Show}) {
                             <Image
                                 source={require('../../assets/Images/Coffesearch.png')}
                                 style={styles.Image}
-                                resizeMode="center"
+                                resizeMode='center'
                             />
                         </View>
                         <Text style={styles.ContentText}>Cà phê</Text>
@@ -79,7 +68,7 @@ function ModelOrder({value, Hide, Show}) {
                             <Image
                                 source={require('../../assets/Images/Coffesearch.png')}
                                 style={styles.Image}
-                                resizeMode="center"
+                                resizeMode='center'
                             />
                         </View>
                         <Text style={styles.ContentText}>Cà phê</Text>
@@ -94,7 +83,7 @@ function ModelOrder({value, Hide, Show}) {
                             <Image
                                 source={require('../../assets/Images/Coffesearch.png')}
                                 style={styles.Image}
-                                resizeMode="center"
+                                resizeMode='center'
                             />
                         </View>
                         <Text style={styles.ContentText}>Cà phê</Text>
@@ -109,7 +98,7 @@ function ModelOrder({value, Hide, Show}) {
                             <Image
                                 source={require('../../assets/Images/Coffesearch.png')}
                                 style={styles.Image}
-                                resizeMode="center"
+                                resizeMode='center'
                             />
                         </View>
                         <Text style={styles.ContentText}>Cà phê</Text>
@@ -124,7 +113,7 @@ function ModelOrder({value, Hide, Show}) {
                             <Image
                                 source={require('../../assets/Images/Coffesearch.png')}
                                 style={styles.Image}
-                                resizeMode="center"
+                                resizeMode='center'
                             />
                         </View>
                         <Text style={styles.ContentText}>Cà phê</Text>

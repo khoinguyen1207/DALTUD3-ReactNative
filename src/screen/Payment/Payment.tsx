@@ -6,21 +6,9 @@
  */
 
 import React, {useState} from 'react';
-import {
-    faArrowLeft,
-    faChevronRight,
-    faPenToSquare,
-} from '@fortawesome/free-solid-svg-icons';
+import {faArrowLeft, faChevronRight, faPenToSquare} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
-import {
-    FlatList,
-    SafeAreaView,
-    ScrollView,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
-} from 'react-native';
+import {FlatList, SafeAreaView, ScrollView, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 import {formatCurrency} from '../../utils/utils';
 
 const DATA = [
@@ -100,10 +88,7 @@ const Item = (item: ItemProps) => (
     <View style={styles.item}>
         <View style={styles.itemLeft}>
             <TouchableOpacity style={styles.btnEdit}>
-                <FontAwesomeIcon
-                    icon={faPenToSquare}
-                    style={{color: '#E57905'}}
-                />
+                <FontAwesomeIcon icon={faPenToSquare} style={{color: '#E57905'}} />
             </TouchableOpacity>
             <View>
                 <Text style={styles.itemName}>
@@ -136,17 +121,11 @@ function Payment(): JSX.Element {
                                 86 Cao Thắng, Quận 3, Hồ Chí Minh, Việt Nam
                             </Text>
                         </View>
-                        <FontAwesomeIcon
-                            icon={faChevronRight}
-                            style={styles.chevron}
-                            size={12}
-                        />
+                        <FontAwesomeIcon icon={faChevronRight} style={styles.chevron} size={12} />
                     </TouchableOpacity>
                     <View style={styles.itemView}>
                         <View>
-                            <Text style={styles.textItem}>
-                                Thời gian nhận hàng
-                            </Text>
+                            <Text style={styles.textItem}>Thời gian nhận hàng</Text>
                             <Text style={styles.subTextItem} numberOfLines={1}>
                                 15 - 30 phút
                             </Text>
@@ -158,14 +137,9 @@ function Payment(): JSX.Element {
                     <FlatList
                         data={DATA}
                         renderItem={({item}) => (
-                            <Item
-                                name={item.name}
-                                size={item.size}
-                                price={item.price}
-                                quantity={item.quantity}
-                            />
+                            <Item name={item.name} size={item.size} price={item.price} quantity={item.quantity} />
                         )}
-                        keyExtractor={item => item.id}
+                        keyExtractor={(item) => item.id}
                     />
                 </View>
                 <View style={styles.group}>
@@ -179,13 +153,8 @@ function Payment(): JSX.Element {
                         <Text style={styles.textPrice}>15.000</Text>
                     </View>
                     <View style={styles.totalView}>
-                        <Text
-                            style={[styles.textCategory, {fontWeight: 'bold'}]}>
-                            Số tiền thanh toán
-                        </Text>
-                        <Text style={[styles.textPrice, {fontWeight: 'bold'}]}>
-                            275.000
-                        </Text>
+                        <Text style={[styles.textCategory, {fontWeight: 'bold'}]}>Số tiền thanh toán</Text>
+                        <Text style={[styles.textPrice, {fontWeight: 'bold'}]}>275.000</Text>
                     </View>
                 </View>
                 <View style={[styles.group, {marginBottom: 0}]}>
@@ -196,9 +165,7 @@ function Payment(): JSX.Element {
                             <TouchableOpacity onPress={() => setRadio(1)}>
                                 <View style={styles.radioWrapper}>
                                     <View style={styles.radio} />
-                                    {selectRadio === 1 && (
-                                        <View style={styles.radioBg} />
-                                    )}
+                                    {selectRadio === 1 && <View style={styles.radioBg} />}
                                 </View>
                             </TouchableOpacity>
                         </View>
@@ -207,9 +174,7 @@ function Payment(): JSX.Element {
                             <TouchableOpacity onPress={() => setRadio(2)}>
                                 <View style={styles.radioWrapper}>
                                     <View style={styles.radio} />
-                                    {selectRadio === 2 && (
-                                        <View style={styles.radioBg} />
-                                    )}
+                                    {selectRadio === 2 && <View style={styles.radioBg} />}
                                 </View>
                             </TouchableOpacity>
                         </View>
@@ -218,9 +183,7 @@ function Payment(): JSX.Element {
                             <TouchableOpacity onPress={() => setRadio(3)}>
                                 <View style={styles.radioWrapper}>
                                     <View style={styles.radio} />
-                                    {selectRadio === 3 && (
-                                        <View style={styles.radioBg} />
-                                    )}
+                                    {selectRadio === 3 && <View style={styles.radioBg} />}
                                 </View>
                             </TouchableOpacity>
                         </View>
