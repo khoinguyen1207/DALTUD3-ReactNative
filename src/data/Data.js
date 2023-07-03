@@ -182,25 +182,25 @@ export const Voucher = [
     {
         id: '1',
         Name: 'Giảm 40% + FREESHIP đơn 4 ly',
-        Img: require('../../assets/Images/40%.jpg'),
+        Img: require('../../assets/Images/voucher01.png'),
         Date: '01/08/2023',
     },
     {
         id: '2',
         Name: 'Giảm 50% + FREESHIP đơn 10 ly',
-        Img: require('../../assets/Images/50%.jpg'),
+        Img: require('../../assets/Images/voucher02.png'),
         Date: '15/08/2023',
     },
     {
         id: '2',
         Name: 'Giảm 50% + FREESHIP đơn 10 ly',
-        Img: require('../../assets/Images/50%.jpg'),
+        Img: require('../../assets/Images/voucher02.png'),
         Date: '15/08/2023',
     },
     {
         id: '2',
         Name: 'Giảm 50% + FREESHIP đơn 10 ly',
-        Img: require('../../assets/Images/50%.jpg'),
+        Img: require('../../assets/Images/voucher01.png'),
         Date: '15/08/2023',
     },
 ];

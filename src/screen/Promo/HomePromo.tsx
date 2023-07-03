@@ -43,6 +43,7 @@ function HomePromo() {
                     <FlatList
                         style={{overflow: 'hidden'}}
                         showsHorizontalScrollIndicator={false}
+                        showsVerticalScrollIndicator={false}
                         data={Voucher}
                         keyExtractor={(item) => item.id}
                         renderItem={({item}) => {
@@ -53,11 +54,11 @@ function HomePromo() {
                                         marginBottom: 10,
                                         padding: 10,
                                         flexDirection: 'row',
-                                        borderRadius: 20,
+                                        borderRadius: 10,
                                     }}>
                                     <Image source={item.Img} style={{width: 100, height: 100}} />
-                                    <View>
-                                        <Text style={{fontSize: 16, fontWeight: '600', color: 'black'}}>
+                                    <View style={{marginLeft: 10}}>
+                                        <Text style={{fontSize: 16, fontWeight: '600', color: 'black', flex: 1}}>
                                             {item.Name}
                                         </Text>
                                         <Text style={{fontSize: 13, fontWeight: '600', color: '#E57905'}}>
