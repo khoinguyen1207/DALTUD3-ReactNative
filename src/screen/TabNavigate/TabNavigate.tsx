@@ -13,7 +13,7 @@ const Tab = createBottomTabNavigator();
 function TabNavigate() {
     return (
         <Tab.Navigator
-            initialRouteName='Home'
+            initialRouteName='Voucher'
             screenOptions={{
                 tabBarStyle: {height: 60, backgroundColor: '#fff'},
                 tabBarShowLabel: false,

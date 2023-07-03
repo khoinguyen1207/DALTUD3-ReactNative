@@ -178,3 +178,29 @@ export const Ice = [
         Price: '59.000đ',
     },
 ];
+export const Voucher = [
+    {
+        id: '1',
+        Name: 'Giảm 40% + FREESHIP đơn 4 ly',
+        Img: require('../../assets/Images/40%.jpg'),
+        Date: '01/08/2023',
+    },
+    {
+        id: '2',
+        Name: 'Giảm 50% + FREESHIP đơn 10 ly',
+        Img: require('../../assets/Images/50%.jpg'),
+        Date: '15/08/2023',
+    },
+    {
+        id: '2',
+        Name: 'Giảm 50% + FREESHIP đơn 10 ly',
+        Img: require('../../assets/Images/50%.jpg'),
+        Date: '15/08/2023',
+    },
+    {
+        id: '2',
+        Name: 'Giảm 50% + FREESHIP đơn 10 ly',
+        Img: require('../../assets/Images/50%.jpg'),
+        Date: '15/08/2023',
+    },
+];
