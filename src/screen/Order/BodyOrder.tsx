@@ -6,7 +6,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import {faEllipsis, faGlassWater, faIceCream, faMugSaucer, faPlus} from '@fortawesome/free-solid-svg-icons';
 import ModelOrder from './ModelOrder';
 
-function ListItem({data, Title}) {
+function ListItem({data, Title}: {data: any; Title: string}) {
     return (
         <View style={{marginBottom: 20}}>
             <Text
@@ -34,7 +34,9 @@ function ListItem({data, Title}) {
                                             borderRadius: 15,
                                         }}
                                         resizeMode='cover'
-                                        source={item.Img}
+                                        source={{
+                                            uri: item.Img,
+                                        }}
                                     />
                                 </View>
                                 <View style={styles.ListCenter}>
@@ -54,6 +56,36 @@ function ListItem({data, Title}) {
         </View>
     );
 }
+function ListIcon({Show}: {Show: any}) {
+    return (
+        <>
+            <TouchableOpacity style={styles.Contentcontainer}>
+                <View>
+                    <Image style={styles.ImgList} source={require('../../../assets/Images/icon01.png')} />
+                </View>
+                <Text style={styles.ContentText}>Cà phê</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.Contentcontainer}>
+                <View>
+                    <Image style={styles.ImgList} source={require('../../../assets/Images/icon02.png')} />
+                </View>
+                <Text style={styles.ContentText}>Đá xay</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.Contentcontainer}>
+                <View>
+                    <Image style={styles.ImgList} source={require('../../../assets/Images/icon04.png')} />
+                </View>
+                <Text style={styles.ContentText}>Trà</Text>
+            </TouchableOpacity>
+            <TouchableOpacity style={styles.Contentcontainer} onPress={Show}>
+                <View>
+                    <Image style={styles.ImgList} source={require('../../../assets/Images/icon03.png')} />
+                </View>
+                <Text style={styles.ContentText}>Xem thêm</Text>
+            </TouchableOpacity>
+        </>
+    );
+}
 function BodyOrder() {
     const [Modal, setModal] = useState(false);
     const show = () => setModal(true);
@@ -62,59 +94,14 @@ function BodyOrder() {
         <>
             <View style={{flex: 1, paddingHorizontal: 15}}>
                 <View style={styles.ContentBottom}>
-                    <TouchableOpacity style={styles.Contentcontainer}>
-                        <View
-                            style={{
-                                backgroundColor: '#FFF2D9',
-                                borderRadius: 100,
-                                padding: 10,
-                            }}>
-                            <FontAwesomeIcon size={25} color='#83491A' icon={faGlassWater} />
-                        </View>
-                        <Text style={styles.ContentText}>Cà phê</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.Contentcontainer}>
-                        <View
-                            style={{
-                                backgroundColor: '#F2F4FD',
-                                borderRadius: 100,
-                                padding: 10,
-                            }}>
-                            <FontAwesomeIcon size={25} color='pink' icon={faIceCream} />
-                        </View>
-                        <Text style={styles.ContentText}>Đá xay</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.Contentcontainer}>
-                        <View
-                            style={{
-                                backgroundColor: '#FFF2D9',
-                                borderRadius: 100,
-                                padding: 10,
-                            }}>
-                            <FontAwesomeIcon size={25} color='tomato' icon={faMugSaucer} />
-                        </View>
-                        <Text style={styles.ContentText}>Trà</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity onPress={show} style={styles.Contentcontainer}>
-                        <View
-                            style={{
-                                backgroundColor: '#FFF2D9',
-                                borderRadius: 100,
-                                padding: 10,
-                                justifyContent: 'center',
-                                alignContent: 'center',
-                            }}>
-                            <FontAwesomeIcon size={25} icon={faEllipsis} />
-                        </View>
-                        <Text style={styles.ContentText}>Xem thêm</Text>
-                    </TouchableOpacity>
+                    <ListIcon Show={show}></ListIcon>
                 </View>
                 <View style={styles.ListContainer}>
                     <ListItem data={Coffe} Title={'Cà Phê'} />
                     <ListItem data={Tea} Title={'Trà Trái Cây - Trà Sữa'} />
                 </View>
             </View>
-            <ModelOrder value={Modal} Hide={hide} Show={show} />
+            <ModelOrder value={Modal} Hide={hide} />
         </>
     );
 }
@@ -136,6 +123,11 @@ const styles = StyleSheet.create({
         fontSize: 15,
         color: 'black',
         fontWeight: 'bold',
+    },
+    ImgList: {
+        width: 60,
+        height: 60,
+        marginBottom: 10,
     },
     ListContainer: {
         flexDirection: 'column',

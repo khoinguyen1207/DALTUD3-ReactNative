@@ -4,7 +4,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-native-fontawesome';
 import React, {useEffect, useState} from 'react';
 import {Dimensions, Image, Modal, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
 
-function ModelOrder({value, Hide, Show}) {
+function ModelOrder({value, Hide}: {value: boolean; Hide: any}) {
     return (
         <Modal animationType='fade' transparent={true} visible={value} statusBarTranslucent={true}>
             <View
@@ -29,94 +29,28 @@ function ModelOrder({value, Hide, Show}) {
                 </View>
                 <View style={styles.ContentBottom}>
                     <TouchableOpacity style={styles.Contentcontainer}>
-                        <View
-                            style={{
-                                backgroundColor: '#FFF2D9',
-                                borderRadius: 100,
-                                padding: 10,
-                            }}>
-                            <Image
-                                source={require('../../assets/Images/Coffesearch.png')}
-                                style={styles.Image}
-                                resizeMode='center'
-                            />
+                        <View>
+                            <Image style={styles.ImgList} source={require('../../../assets/Images/icon01.png')} />
                         </View>
                         <Text style={styles.ContentText}>Cà phê</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.Contentcontainer}>
-                        <View
-                            style={{
-                                backgroundColor: '#FFF2D9',
-                                borderRadius: 100,
-                                padding: 10,
-                            }}>
-                            <Image
-                                source={require('../../assets/Images/Coffesearch.png')}
-                                style={styles.Image}
-                                resizeMode='center'
-                            />
+                        <View>
+                            <Image style={styles.ImgList} source={require('../../../assets/Images/icon02.png')} />
                         </View>
-                        <Text style={styles.ContentText}>Cà phê</Text>
+                        <Text style={styles.ContentText}>Đá xay</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.Contentcontainer}>
-                        <View
-                            style={{
-                                backgroundColor: '#FFF2D9',
-                                borderRadius: 100,
-                                padding: 10,
-                            }}>
-                            <Image
-                                source={require('../../assets/Images/Coffesearch.png')}
-                                style={styles.Image}
-                                resizeMode='center'
-                            />
+                        <View>
+                            <Image style={styles.ImgList} source={require('../../../assets/Images/icon04.png')} />
                         </View>
-                        <Text style={styles.ContentText}>Cà phê</Text>
+                        <Text style={styles.ContentText}>Trà</Text>
                     </TouchableOpacity>
                     <TouchableOpacity style={styles.Contentcontainer}>
-                        <View
-                            style={{
-                                backgroundColor: '#FFF2D9',
-                                borderRadius: 100,
-                                padding: 10,
-                            }}>
-                            <Image
-                                source={require('../../assets/Images/Coffesearch.png')}
-                                style={styles.Image}
-                                resizeMode='center'
-                            />
+                        <View>
+                            <Image style={styles.ImgList} source={require('../../../assets/Images/icon05.png')} />
                         </View>
-                        <Text style={styles.ContentText}>Cà phê</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.Contentcontainer}>
-                        <View
-                            style={{
-                                backgroundColor: '#FFF2D9',
-                                borderRadius: 100,
-                                padding: 10,
-                            }}>
-                            <Image
-                                source={require('../../assets/Images/Coffesearch.png')}
-                                style={styles.Image}
-                                resizeMode='center'
-                            />
-                        </View>
-                        <Text style={styles.ContentText}>Cà phê</Text>
-                    </TouchableOpacity>
-                    <TouchableOpacity style={styles.Contentcontainer}>
-                        <View
-                            style={{
-                                backgroundColor: '#FFF2D9',
-                                borderRadius: 100,
-                                padding: 10,
-                            }}>
-                            <Image
-                                source={require('../../assets/Images/Coffesearch.png')}
-                                style={styles.Image}
-                                resizeMode='center'
-                            />
-                        </View>
-                        <Text style={styles.ContentText}>Cà phê</Text>
+                        <Text style={styles.ContentText}>Cloud Tea</Text>
                     </TouchableOpacity>
                 </View>
             </View>
@@ -149,9 +83,9 @@ const styles = StyleSheet.create({
         marginRight: 10,
         alignItems: 'center',
     },
-    Image: {
-        width: 70,
-        height: 70,
+    ImgList: {
+        width: 60,
+        height: 60,
         marginBottom: 10,
     },
     ContentBottom: {

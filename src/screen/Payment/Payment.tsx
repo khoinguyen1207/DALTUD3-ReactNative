@@ -101,13 +101,13 @@ const Item = (item: ItemProps) => (
     </View>
 );
 
-function Payment(): JSX.Element {
+function Payment({navigation}: {navigation: any}): JSX.Element {
     const [selectRadio, setRadio] = useState(1);
     return (
         <SafeAreaView style={styles.container}>
             <ScrollView>
                 <View style={styles.titleBar}>
-                    <TouchableOpacity style={styles.btnBack}>
+                    <TouchableOpacity style={styles.btnBack} onPress={() => navigation.goBack()}>
                         <FontAwesomeIcon icon={faArrowLeft} />
                     </TouchableOpacity>
                     <Text style={styles.title}>Xác nhận đơn hàng</Text>

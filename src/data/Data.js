@@ -1,39 +1,39 @@
 export const Idea = [
     {
         id: '1',
-        Img: require('../assets/Images/tradao.jpg'),
+        Img: 'https://product.hstatic.net/1000075078/product/1669736819_tra-dao-cam-sa-da_93863e8ec44d407888ae70af9febc704_large.png',
         Name: 'Trà đào Cam Sả - Đá',
         Price: '59.000đ',
     },
     {
         id: '2',
-        Img: require('../assets/Images/trasen.jpg'),
+        Img: 'https://product.hstatic.net/1000075078/product/tra-sen_905594_4c3a17b027de4acd9a2ce97c574c8539.jpg',
         Name: 'Trà Long Nhân Hạt Sen',
         Price: '59.000đ',
     },
     {
         id: '3',
-        Img: require('../assets/Images/hotchoco.jpg'),
-        Name: 'Chocolate Đá',
-        Price: '55.000đ',
+        Img: 'https://product.hstatic.net/1000075078/product/1686021305_banh-kem-dau-new_21014f81cf174504bbd1886a16bee2e0.jpg',
+        Name: 'Frosty Bánh Kem Dâu',
+        Price: '59.000đ',
     },
     {
         id: '4',
-        Img: require('../assets/Images/caramelda.jpg'),
-        Name: 'Caramel Macchiato Đá',
-        Price: '59.000đ',
+        Img: 'https://product.hstatic.net/1000075078/product/1675740758_cloudtea-oolong-nuong-kem-cheese-min_358aca3939ee4972a3ab8b1b0a3a9d9c.png',
+        Name: 'CloudTea Oolong Nướng Kem Dừa',
+        Price: '55.000đ',
     },
     {
         id: '5',
-        Img: require('../assets/Images/KemNuong.jpg'),
-        Name: 'CloudTea Oolong Nướng Kem Cheese',
-        Price: '59.000đ',
+        Img: 'https://product.hstatic.net/1000075078/product/1686716537_dd-latte_5dacc007928f45718d524b5b179916bc.jpg',
+        Name: 'Đường Đen Marble Latte',
+        Price: '55.000đ',
     },
     {
         id: '6',
-        Img: require('../assets/Images/trasen.jpg'),
-        Name: 'Trà đào Cam Sả - Đá',
-        Price: '59.000đ',
+        Img: 'https://product.hstatic.net/1000075078/product/cappuccino_621532_9cf1c4eba3ad473e92666d2d5a0a9cc9.jpg',
+        Name: 'Cappuccino Nóng',
+        Price: '55.000đ',
     },
 ];
 export const TitleNew = [
@@ -109,31 +109,25 @@ export const Coffe = [
     {
         id: '1',
         Name: 'Caramel Đá',
-        Img: require('../assets/Images/caramelda.jpg'),
+        Img: 'https://product.hstatic.net/1000075078/product/caramel-macchiato_143623_891ca4713a124f5c84e1f3a5caa8bb47_large.jpg',
         Price: '40.000đ',
     },
     {
         id: '2',
         Name: 'Caramel Nóng',
-        Img: require('../assets/Images/Caramel.jpg'),
+        Img: 'https://product.hstatic.net/1000075078/product/caramelmacchiatonong_168039_a1fcaac50f8d4d63a86837033fd02f39_large.jpg',
         Price: '39.000đ',
-    },
-    {
-        id: '3',
-        Name: 'Chocolate Nóng',
-        Img: require('../assets/Images/hotchoco.jpg'),
-        Price: '19.000đ',
     },
     {
         id: '4',
         Name: 'Bạc Xĩu',
-        Img: require('../assets/Images/bacxiu.jpg'),
+        Img: 'https://product.hstatic.net/1000075078/product/1639377904_bac-siu_bfdb458c1c9844b3b43c840c1ee69503_large.jpg',
         Price: '29.000đ',
     },
     {
         id: '5',
         Name: 'Cà Phê Sữa Nóng',
-        Img: require('../assets/Images/suada.jpg'),
+        Img: 'https://product.hstatic.net/1000075078/product/1639377770_cfsua-nong_f7466b7344d64658aa7b56544a6b7a7e_large.jpg',
         Price: '39.000đ',
     },
 ];
@@ -141,19 +135,19 @@ export const Tea = [
     {
         id: '1',
         Name: 'Trà Long Nhãn Hạt Sen',
-        Img: require('../assets/Images/tranhan.jpg'),
+        Img: 'https://product.hstatic.net/1000075078/product/1649378747_tra-sen-nhan_aaeb3337f975466a980577f62d673d61.jpg',
         Price: '49.000đ',
     },
     {
         id: '2',
         Name: 'Trà Đào Cam sả',
-        Img: require('../assets/Images/tradao.jpg'),
+        Img: 'https://product.hstatic.net/1000075078/product/1669736819_tra-dao-cam-sa-da_93863e8ec44d407888ae70af9febc704.png',
         Price: '49.000đ',
     },
     {
         id: '3',
         Name: 'Trà Đào Cam Sả - Nóng',
-        Img: require('../assets/Images/tradaonong.jpg'),
+        Img: 'https://product.hstatic.net/1000075078/product/tdcs-nong_288997_9369199769f04de18a6890a510c607df.jpg',
         Price: '59.000đ',
     },
 ];

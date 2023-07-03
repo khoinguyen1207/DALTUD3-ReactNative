@@ -69,7 +69,9 @@ function Profile({navigation}: {navigation: any}): JSX.Element {
                         />
                         <Text style={styles.textSection}>Voucher</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={[styles.btnUtil, {flex: 1}]}>
+                    <TouchableOpacity
+                        style={[styles.btnUtil, {flex: 1}]}
+                        onPress={() => navigation.navigate('Payment')}>
                         <FontAwesomeIcon
                             icon={faCartShopping}
                             style={{

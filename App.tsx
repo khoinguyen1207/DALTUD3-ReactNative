@@ -14,6 +14,7 @@ import Login from './src/screen/Login/Login';
 import Register from './src/screen/Register/Register';
 import TabNavigate from './src/screen/TabNavigate/TabNavigate';
 import OrderHistory from './src/screen/OrderHistory/OrderHistory';
+import Payment from './src/screen/Payment/Payment';
 
 const Stack = createNativeStackNavigator();
 
@@ -25,6 +26,7 @@ function App(): JSX.Element {
                 <Stack.Screen name='Register' component={Register} />
                 <Stack.Screen name='TabNavigate' component={TabNavigate} />
                 <Stack.Screen name='OrderHistory' component={OrderHistory} />
+                <Stack.Screen name='Payment' component={Payment} />
             </Stack.Navigator>
         </NavigationContainer>
     );

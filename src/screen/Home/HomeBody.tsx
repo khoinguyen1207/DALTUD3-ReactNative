@@ -83,7 +83,7 @@ export default function HomeBody() {
                                         borderRadius: 10,
                                         flexShrink: 0,
                                     }}
-                                    source={item.Img}
+                                    source={{uri: item.Img}}
                                 />
                                 <View style={{padding: 2, flex: 1}}>
                                     <Text

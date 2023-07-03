@@ -24,7 +24,7 @@ function TabNavigate() {
                 options={{
                     headerShown: false,
                     tabBarIcon: ({focused}) => (
-                        <ButtonNavigate focused={focused} iconName={faHouse} tabName={'Đặt hàng'} />
+                        <ButtonNavigate focused={focused} iconName={faHouse} tabName={'Trang chủ'} />
                     ),
                 }}
             />

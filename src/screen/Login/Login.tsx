@@ -23,17 +23,15 @@ import {
 } from 'react-native';
 
 function Login({navigation}: {navigation: any}): JSX.Element {
+    const image = {
+        uri: 'https://file.hstatic.net/1000075078/file/thecofeehouse_nguocgochibiscus_5_d775e20255c744ac9b71cee56cb21536_grande.jpg',
+    };
     return (
         <KeyboardAvoidingView style={styles.container} behavior={Platform.OS === 'ios' ? 'padding' : 'height'}>
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
                 <View style={styles.container}>
                     <View style={styles.contentContainer}>
-                        <ImageBackground
-                            source={{
-                                uri: 'https://file.hstatic.net/1000075078/file/thecofeehouse_nguocgochibiscus_5_d775e20255c744ac9b71cee56cb21536_grande.jpg',
-                            }}
-                            resizeMode='cover'
-                            style={{alignItems: 'center', flex: 1}}>
+                        <ImageBackground source={image} resizeMode='cover' style={{alignItems: 'center', flex: 1}}>
                             <Text style={styles.textTitle}>Coffee House</Text>
                         </ImageBackground>
                         <View style={styles.content}>
